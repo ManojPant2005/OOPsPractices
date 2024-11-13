@@ -3,6 +3,7 @@ using Practices.Basics;
 using Practices.Inheritance;
 using Practices.Interface;
 using Practices.Polymorphism;
+using Practices.Programs;
 using System.Runtime.InteropServices;
 
 
@@ -49,7 +50,7 @@ namespace Practices
             myDog.MakeSound();     // Output: The dog barks.
             myCat.MakeSound();
             Print();
-            _calculate.AddTwoNum(12, 45);
+          
 
             MyClass my = new MyClass();
             my.Id = 101;
@@ -59,6 +60,10 @@ namespace Practices
             Console.WriteLine(my.Id);
             Console.WriteLine(my.Name);
             Console.WriteLine(my.Description);
+
+            AddTwoNumber addTwo = new AddTwoNumber();
+            addTwo.ForeachLoop();
+
         }
 
        
