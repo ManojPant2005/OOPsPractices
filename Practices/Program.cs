@@ -10,6 +10,8 @@ namespace Practices
 {
     public class Program 
     {
+        public string MyGlobalVar { get; set; }
+
         private readonly ICalculate _calculate;
 
         public Program(ICalculate calculate)
@@ -19,11 +21,12 @@ namespace Practices
        
         public static void Main(string[] args)
         {
-
+            Print();
             bool myName = true;
 
             var id = Guid.NewGuid();
             Console.WriteLine(id.ToString());
+
            
            // Inheritance2 i = new Inheritance2();
            // i.AddTwoNumWithParameter(1, 2);
@@ -46,7 +49,7 @@ namespace Practices
             myDog.MakeSound();     // Output: The dog barks.
             myCat.MakeSound();
             Print();
-
+            _calculate.AddTwoNum(12, 45);
 
             MyClass my = new MyClass();
             my.Id = 101;
@@ -58,9 +61,11 @@ namespace Practices
             Console.WriteLine(my.Description);
         }
 
+       
         public static void Print()
         {
             Console.WriteLine("Heloo");
+           
         }
                 
         
